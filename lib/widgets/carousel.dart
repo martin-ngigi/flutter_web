@@ -78,6 +78,7 @@ class _MainCarouselState extends State<MainCarousel> {
               }),
           carouselController: _controller,
         ),
+        //show text on the slider
         AspectRatio(
           aspectRatio: 18 / 8,
           child: Center(

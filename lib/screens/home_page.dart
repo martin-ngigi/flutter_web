@@ -66,6 +66,8 @@ class _HomePageState extends State<HomePage> {
                       ),
                       FeaturedHeading(screenSize: screenSize),
                       FeaturedTiles(screenSize: screenSize),
+                      MainHeading(screenSize: screenSize),
+                      MainCarousel(),
                     ],
                   ),
 
