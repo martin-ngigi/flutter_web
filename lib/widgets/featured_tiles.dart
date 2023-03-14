@@ -19,7 +19,8 @@ class FeaturedTiles extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ResponsiveWidget.isSmallScreen(context)
+    return
+      /* ResponsiveWidget.isSmallScreen(context)
         ? Padding(
             padding: EdgeInsets.only(top: screenSize.height / 50),
             child: SingleChildScrollView(
@@ -68,7 +69,8 @@ class FeaturedTiles extends StatelessWidget {
               ),
             ),
           )
-        : Padding(
+        : */
+      Padding(
             padding: EdgeInsets.only(
               top: screenSize.height * 0.06,
               left: screenSize.width / 15,
@@ -77,7 +79,7 @@ class FeaturedTiles extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                ...Iterable<int>.generate(assets.length).map(
+                ...Iterable<int>.generate(assets.length).map( //generate widgets dynamically
                   (int pageIndex) => Column(
                     children: [
                       SizedBox(

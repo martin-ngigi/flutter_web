@@ -43,29 +43,38 @@ class _HomePageState extends State<HomePage> {
           preferredSize: Size(screenSize.width, 70),
         child: TopBarContents(_opacity),
       ),
-      body: Column(
-          children: [
-            Stack(
-              children: [
-                Container(
-                  child: SizedBox(
-                    height: screenSize.height * 0.65,
-                    width: screenSize.width,
-                    child: Image.asset(
-                      'assets/images/background.png',
-                      fit: BoxFit.cover,
+      body: SingleChildScrollView(
+        child: Column(
+            children: [
+              Stack(
+                children: [
+                  Container(
+                    child: SizedBox(
+                      height: screenSize.height * 0.65,
+                      width: screenSize.width,
+                      child: Image.asset(
+                        'assets/images/background.png',
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
-                ),
-                FloatingQuickAccessBar(
-                    screenSize: screenSize,
+                  Column(
+                    children: [
+                      FloatingQuickAccessBar(
+                        screenSize: screenSize,
 
-                ),
-              ],
-            ),
+                      ),
+                      FeaturedHeading(screenSize: screenSize),
+                      FeaturedTiles(screenSize: screenSize),
+                    ],
+                  ),
 
-          ],
-        ),
+                ],
+              ),
+
+            ],
+          ),
+      ),
 
     );
   }
