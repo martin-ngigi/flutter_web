@@ -57,7 +57,10 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
+                FloatingQuickAccessBar(
+                    screenSize: screenSize,
 
+                ),
               ],
             ),
 
