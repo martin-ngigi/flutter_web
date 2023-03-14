@@ -38,6 +38,11 @@ class _HomePageState extends State<HomePage> {
         : 1;
 
     return Scaffold(
+      extendBodyBehindAppBar: true,//set body behind app bar
+      appBar: PreferredSize(
+          preferredSize: Size(screenSize.width, 70),
+        child: TopBarContents(_opacity),
+      ),
       body: Column(
           children: [
             Stack(
