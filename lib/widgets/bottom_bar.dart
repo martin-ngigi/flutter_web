@@ -14,6 +14,7 @@ class BottomBar extends StatelessWidget {
     return Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(0.0)),
+          /**
           boxShadow: <BoxShadow>[
             BoxShadow(
               color: gradientStartColor,
@@ -26,6 +27,7 @@ class BottomBar extends StatelessWidget {
               blurRadius: 1.0,
             ),
           ],
+           */
           gradient: LinearGradient(
               colors: [
                 gradientStartColor,
@@ -44,11 +46,26 @@ class BottomBar extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
+                    //about
                     BottomBarColumn(
                       heading: 'ABOUT',
                       s1: 'Contact Us',
                       s2: 'About Us',
                       s3: 'Careers',
+                    ),
+                    //help
+                    BottomBarColumn(
+                      heading: 'HELP',
+                      s1: 'Payment',
+                      s2: 'Cancellation',
+                      s3: 'FAQ',
+                    ),
+                    //social
+                    BottomBarColumn(
+                      heading: 'SOCIAL',
+                      s1: 'Twitter',
+                      s2: 'FaceBook',
+                      s3: 'YouTube',
                     ),
                     Container(
                       color: Colors.white,
@@ -60,12 +77,12 @@ class BottomBar extends StatelessWidget {
                       children: [
                         InfoText(
                           type: 'Email',
-                          text: 'dylan@gmail.com',
+                          text: 'martinwainaina001@gmail.com',
                         ),
                         SizedBox(height: 5),
                         InfoText(
                           type: 'Address',
-                          text: '128, Trymore Road, Delft, MN - 56124',
+                          text: '223 Tom Mboya Street, Nairobi, Kenya',
                         )
                       ],
                     ),
@@ -76,7 +93,7 @@ class BottomBar extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
                 Text(
-                  'Copyright © 2021 | DBestech',
+                  'Copyright © 2023 | Wainaina The Dev',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 14,
