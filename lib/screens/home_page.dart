@@ -39,10 +39,27 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       extendBodyBehindAppBar: true,//set body behind app bar
-      appBar: PreferredSize(
+      //anything less than 800 px width, then its a mobile device.
+      //if the screensize is less than 800, show AppBar, else show Preferred size
+      appBar: screenSize.width<800?AppBar(
+        iconTheme: IconThemeData(color: Colors.blue),//change the color of icons, inclussive of the drawer icon.
+        backgroundColor: Colors.white.withOpacity(_opacity),
+        elevation: 0,
+        title: Text(
+          'Author',
+          style: TextStyle(
+            color: Color(0xFF077bd7),
+            fontSize: 26,
+            fontFamily: 'Raleway',
+            fontWeight: FontWeight.w900,
+            letterSpacing: 3,
+          ),
+        ),
+      ): PreferredSize(
           preferredSize: Size(screenSize.width, 70),
         child: TopBarContents(_opacity),
       ),
+      drawer: MenuDrawer(),//only visible on mobile phones... ie on devices that have a width of less than 800
       body: SingleChildScrollView(
         controller: _scrollController,//fixed top nav menu
         child: Column(

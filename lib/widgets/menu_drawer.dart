@@ -17,10 +17,13 @@ class MenuDrawer extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
+              //inkwell, used for tapping event.
+              //without inkwell you can not have a hover effect.
+              //Home
               InkWell(
                 onTap: () {},
                 child: Text(
-                  'Login',
+                  'Home',
                   style: TextStyle(color: Colors.white, fontSize: 22),
                 ),
               ),
@@ -31,10 +34,11 @@ class MenuDrawer extends StatelessWidget {
                   thickness: 2,
                 ),
               ),
+              //About
               InkWell(
                 onTap: () {},
                 child: Text(
-                  'Sign Up',
+                  'About',
                   style: TextStyle(color: Colors.white, fontSize: 22),
                 ),
               ),
@@ -45,6 +49,7 @@ class MenuDrawer extends StatelessWidget {
                   thickness: 2,
                 ),
               ),
+              //Read
               InkWell(
                 onTap: () {},
                 child: Text(
@@ -59,6 +64,7 @@ class MenuDrawer extends StatelessWidget {
                   thickness: 2,
                 ),
               ),
+              //Contact Us
               InkWell(
                 onTap: () {},
                 child: Text(
@@ -70,9 +76,9 @@ class MenuDrawer extends StatelessWidget {
                 child: Align(
                   alignment: Alignment.bottomCenter,
                   child: Text(
-                    'Copyright © 2021 | DBestech',
+                    'Copyright © 2023 | Wainanina The Dev',
                     style: TextStyle(
-                      color: Colors.blueGrey.shade300,
+                      color: Colors.white60,
                       fontSize: 14,
                     ),
                   ),
