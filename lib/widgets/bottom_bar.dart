@@ -40,7 +40,70 @@ class BottomBar extends StatelessWidget {
         ),
       padding: EdgeInsets.all(30),
       //color: Colors.blueGrey[900],
-      child: Column(
+      //if screen size is less than 800, then its a mobile
+      //if screen size is less than 800, show a column
+      child: MediaQuery.of(context).size.width<800 ? Column(
+        children: [
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              //about
+              BottomBarColumn(
+                heading: 'ABOUT',
+                s1: 'Contact Us',
+                s2: 'About Us',
+                s3: 'Careers',
+              ),
+              //help
+              BottomBarColumn(
+                heading: 'HELP',
+                s1: 'Payment',
+                s2: 'Cancellation',
+                s3: 'FAQ',
+              ),
+              //social
+              BottomBarColumn(
+                heading: 'SOCIAL',
+                s1: 'Twitter',
+                s2: 'FaceBook',
+                s3: 'YouTube',
+              ),
+            ],
+          ),
+          Divider(
+            color: Colors.white,
+          ),
+          SizedBox(height: 10,),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              InfoText(
+                type: 'Email',
+                text: 'martinwainaina001@gmail.com',
+              ),
+              SizedBox(height: 5),
+              InfoText(
+                type: 'Address',
+                text: '223 Tom Mboya Street, Nairobi, Kenya',
+              )
+            ],
+          ),
+          SizedBox(height: 10,),
+          Divider(
+            color: Colors.white,
+          ),
+          SizedBox(height: 20),
+          Text(
+            'Copyright © 2023 | Wainaina The Dev',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 14,
+            ),
+          ),
+        ],
+      ):
+      Column(
               children: [
                 Row(
                   mainAxisSize: MainAxisSize.max,
