@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web/screens/about_page.dart';
+import 'package:flutter_web/screens/page_not_found.dart';
 
 import 'screens/home_page.dart';
 
@@ -15,7 +17,15 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      // home: HomePage(),
+      initialRoute: '/',
+      routes: {
+        '/' : (context) => HomePage(),
+        '/about' : (context) => AboutPage()
+      },
+      onUnknownRoute: (settings) {
+        return MaterialPageRoute(builder: (_) => PageNotFound());
+      },
     );
   }
 }

@@ -22,7 +22,7 @@ class MainHeading                                                               
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Color(0xFF077bd7),
-                fontSize: 40,
+                fontSize: screenSize.width/20,
                 fontFamily: 'Montserrat',
                 fontWeight: FontWeight.bold,
               ),
